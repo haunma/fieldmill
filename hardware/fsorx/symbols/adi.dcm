@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ADG611
+D Quad SPST Analog Switches
+K CMOS Analog Switch
+F http://www.analog.com/media/en/technical-documentation/data-sheets/ADG611_612_613.pdf
+$ENDCMP
+#
+#End Doc Library

@@ -1,0 +1,53 @@
+define symbol __intvec_start__ = 0x08000000;
+/*-Memory Regions-*/
+define symbol __region_IROM1_start__ = 0x08000000;
+define symbol __region_IROM1_end__   = 0x080FFFFF;
+define symbol __region_IROM2_start__ = 0x0;
+define symbol __region_IROM2_end__   = 0x0;
+define symbol __region_EROM1_start__ = 0x90000000;
+define symbol __region_EROM1_end__   = 0x9FFFFFFF;
+define symbol __region_EROM2_start__ = 0x0;
+define symbol __region_EROM2_end__   = 0x0;
+define symbol __region_EROM3_start__ = 0x0;
+define symbol __region_EROM3_end__   = 0x0;
+define symbol __region_IRAM1_start__ = 0x20000000;
+define symbol __region_IRAM1_end__   = 0x2003FFFF;
+define symbol __region_IRAM2_start__ = 0x20040000;
+define symbol __region_IRAM2_end__   = 0x2004FFFF;
+define symbol __region_ERAM1_start__ = 0x0;
+define symbol __region_ERAM1_end__   = 0x0;
+define symbol __region_ERAM2_start__ = 0x0;
+define symbol __region_ERAM2_end__   = 0x0;
+define symbol __region_ERAM3_start__ = 0x0;
+define symbol __region_ERAM3_end__   = 0x0;
+/*-Sizes-*/
+define symbol __size_cstack__     = 0x4000;
+
+define memory mem with size = 4G;
+define region IROM_region   =   mem:[from __region_IROM1_start__ to __region_IROM1_end__]
+                              | mem:[from __region_IROM2_start__ to __region_IROM2_end__];
+define region EROM_region   =   mem:[from __region_EROM1_start__ to __region_EROM1_end__]
+                              | mem:[from __region_EROM2_start__ to __region_EROM2_end__]
+                              | mem:[from __region_EROM3_start__ to __region_EROM3_end__];
+define region IRAM_region   =   mem:[from __region_IRAM1_start__ to __region_IRAM1_end__]
+                              | mem:[from __region_IRAM2_start__ to __region_IRAM2_end__];
+define region ERAM_region   =   mem:[from __region_ERAM1_start__ to __region_ERAM1_end__]
+                              | mem:[from __region_ERAM2_start__ to __region_ERAM2_end__]
+                              | mem:[from __region_ERAM3_start__ to __region_ERAM3_end__];
+
+define block CSTACK     with alignment = 8, size = __size_cstack__   { };
+
+do not initialize  { section .noinit };
+initialize by copy { readwrite };
+if (isdefinedsymbol(__USE_DLIB_PERTHREAD))
+{
+  // Required in a multi-threaded application
+  initialize by copy with packing = none { section __DLIB_PERTHREAD };
+}
+
+place at address mem:__intvec_start__ { readonly section .intvec };
+
+place in IROM_region { readonly };
+place in EROM_region { readonly section application_specific_ro };
+place in IRAM_region { readwrite, block CSTACK };
+place in ERAM_region { readwrite section application_specific_rw };

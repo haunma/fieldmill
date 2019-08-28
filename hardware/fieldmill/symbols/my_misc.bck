@@ -1,0 +1,12 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 24C256
+D I2C Serial EEPROM
+K EEPROM Serial
+$ENDCMP
+#
+$CMP ALD1105
+D Dual N and P MOSFET matched pairs
+$ENDCMP
+#
+#End Doc Library

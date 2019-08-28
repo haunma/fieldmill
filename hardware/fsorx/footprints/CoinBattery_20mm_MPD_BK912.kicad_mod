@@ -1,0 +1,16 @@
+(module CoinBatt (layer F.Cu)
+  (at 0 0)
+  (attr smd)
+  (fp_text reference BT (at -11 6) (layer F.SilkS)
+    (effects (font (size 1.27 1.27) (thickness 0.2032)))
+  )
+  (fp_text value Val** (at 11 6) (layer F.SilkS) hide
+    (effects (font (size 1.27 1.27) (thickness 0.2032)))
+  )
+  (pad 1 smd rect   (at -10.98 0) (size  2.79  5.08) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd circle (at      0 0) (size 17.78 17.78) (layers F.Cu F.Paste F.Mask))
+  (pad 1 smd rect   (at  10.98 0) (size  2.79  5.08) (layers F.Cu F.Paste F.Mask))
+)
+
+17.78 dia
+

@@ -1,0 +1,82 @@
+Circuit: * C:\Users\mark\proj\fieldmill\hardware\fsorx\gated_int.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+vernier = 0.5
+Gmin = 1.86414
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 1.94072
+vernier = 0.0833333
+vernier = 0.111111
+Gmin = 1.53687
+vernier = 0.148148
+vernier = 0.197531
+Gmin = 1.0622
+vernier = 0.0987653
+vernier = 0.0493827
+vernier = 0.0246913
+Gmin = 1.05487
+vernier = 0.0123457
+vernier = 0.00617283
+Gmin = 1.03874
+vernier = 0.00823044
+vernier = 0.00411522
+Gmin = 1.02864
+vernier = 0.00205761
+vernier = 0.00274348
+vernier = 0.00137174
+Gmin = 1.02565
+vernier = 0.00182899
+vernier = 0.000914493
+Gmin = 1.02249
+vernier = 0.00121932
+Gmin = 1.01977
+vernier = 0.00162576
+vernier = 0.000812882
+vernier = 0.00108384
+vernier = 0.000541921
+Gmin = 1.01842
+vernier = 0.000722562
+Gmin = 1.01681
+vernier = 0.000963415
+vernier = 0.000481708
+vernier = 0.000642277
+Gmin = 1.01569
+vernier = 0.000481708
+vernier = 0.000642277
+vernier = 0.000481707
+Gmin = 1.015
+vernier = 0.000642276
+vernier = 0.000481707
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Source Step = 3.0303%
+Source Step = 33.3333%
+Source Step = 63.6364%
+Source Step = 93.9394%
+Source stepping succeeded in finding the operating point.
+
+
+Date: Fri Oct 05 13:47:58 2018
+Total elapsed time: 5.336 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 41284
+traniter = 31858
+tranpoints = 9992
+accept = 7546
+rejected = 2446
+matrix size = 257
+fillins = 461
+solver = Normal
+Thread vector: 13.0/9.7[4] 7.8/4.8[4] 4.2/4.7[1] 1.1/7.1[1]  2592/500
+Matrix Compiler1: 32.85 KB object code size  12.7/6.3/[2.8]
+Matrix Compiler2: 26.64 KB object code size  6.2/7.7/[1.5]
+

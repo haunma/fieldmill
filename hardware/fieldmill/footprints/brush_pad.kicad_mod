@@ -1,0 +1,9 @@
+(module brush_pad (layer F.Cu)
+  (fp_text reference TP (at 0 1.905) (layer F.SilkS)
+    (effects (font (size 0.762 0.762) (thickness 0.15)))
+  )
+  (fp_text value VAL** (at 0 0) (layer F.SilkS) hide
+    (effects (font (size 0.762 0.762) (thickness 0.15)))
+  )
+  (pad 1 smd rect (at 0 0) (size 3 10) (layers F.Cu F.Paste F.Mask))
+)

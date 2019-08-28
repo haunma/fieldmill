@@ -1,0 +1,18 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 24C256
+D I2C Serial EEPROM
+K EEPROM Serial
+$ENDCMP
+#
+$CMP ODD-12WB
+D Photodiode
+K photodiode diode opto
+$ENDCMP
+#
+$CMP SD103ASDM
+D Diode array
+K rectifier acdc
+$ENDCMP
+#
+#End Doc Library

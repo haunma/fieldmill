@@ -1,0 +1,14 @@
+firmware/build/Debug
+firmware/build/Release
+firmware/build/settings
+firmware/build/*.dep
+firmware/build/*.log
+firmware/trials/
+hardware/*.raw
+hardware/*.plt
+hardware/*.fft
+hardware/*.log
+*.orig
+*.kicad_pcb-bak
+*.lib~
+*.dcm~
